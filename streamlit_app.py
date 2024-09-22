@@ -16,7 +16,9 @@ st.write("Analiza Datelor")
 # Upload file
 uploaded_file = st.file_uploader("Choose file", type="csv")
 if uploaded_file is not None:
-    data = pd.read_csv(uploaded_file, header=None)
-    
-    st.write("## Setul original")
-    st.write(data.head())
+    data = pd.read_csv(uploaded_file, header=None)  
+    # Display the first few rows and data info
+    print(df.head())
+    print("\
+    Dataframe Info:")
+    print(df.info())
