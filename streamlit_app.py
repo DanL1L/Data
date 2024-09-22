@@ -38,7 +38,7 @@ if uploaded_file is not None:
     st.write(data.describe())
     # Correct the column names for sales revenues and other indicators
     sales_revenues = df[['Venituri din vinzari, milioane lei_2021', 'Venituri din vinzari, milioane lei_2022', 'Venituri din vinzari, milioane lei_2023']]
-        profit_before_tax = df[['Rezultatul financiar soldat pina la impozitare. Profit (+) Pierdere (-), milioane lei_2021',
+    profit_before_tax = df[['Rezultatul financiar soldat pina la impozitare. Profit (+) Pierdere (-), milioane lei_2021',
                         '_Rezultatul financiar soldat pina la impozitare. Profit (+) Pierdere (-), milioane lei_2022',
                         'Rezultatul financiar soldat pina la impozitare. Profit (+) Pierdere (-), milioane lei_2023']]
 
