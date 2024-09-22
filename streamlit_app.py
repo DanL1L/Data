@@ -21,10 +21,15 @@ if uploaded_file is not None:
     data = pd.read_csv(uploaded_file)  
     st.write("Data :")
     st.write(data.head())
+
+
     
+    # Display column names
+    st.write("Column Names:")
+    st.write(data.columns.tolist())
+
     # Basic statistics
     st.write("Basic Statistics:")
     st.write(data.describe())
-    
 
 print("Streamlit app code executed successfully.")
