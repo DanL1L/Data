@@ -20,19 +20,8 @@ uploaded_file = st.file_uploader("Choose file", type="csv")
 if uploaded_file is not None:
     data = pd.read_csv(uploaded_file)  
     st.write("Data :")
-    st.write(data.head())
-
-    # Display dataframe info
-    st.write("Dataframe Info:")
-    buffer = io.StringIO()
-    data.info(buf=buffer)
-    s = buffer.getvalue()
-    st.text(s)
+    st.write(data.show())
     
-    # Display column names
-    st.write("Column Names:")
-    st.write(data.columns.tolist())
-
     # Basic statistics
     st.write("Basic Statistics:")
     st.write(data.describe())
