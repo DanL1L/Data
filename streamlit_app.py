@@ -17,8 +17,16 @@ st.write("Analiza Datelor")
 uploaded_file = st.file_uploader("Choose file", type="csv")
 if uploaded_file is not None:
     data = pd.read_csv(uploaded_file, header=None)  
-    # Display the first few rows and data info
     print(df.head())
+
+    # Display dataframe info
     print("\
     Dataframe Info:")
     print(df.info())
+    
+    # Display column names
+    print("\
+    Column Names:")
+    print(df.columns)
+    
+
