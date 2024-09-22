@@ -20,7 +20,7 @@ uploaded_file = st.file_uploader("Choose file", type="csv")
 if uploaded_file is not None:
     data = pd.read_csv(uploaded_file)  
     st.write("Data :")
-    st.write(data.show())
+    st.write(data.print())
     
     # Basic statistics
     st.write("Basic Statistics:")
