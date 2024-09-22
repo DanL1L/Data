@@ -24,8 +24,7 @@ if uploaded_file is not None:
     st.write("Dataframe Info:")
     buffer = []
     data.info(buf=buffer)
-    s = "\
-".join(buffer)
+    s = "\".join(buffer)
     st.text(s)
     
     # Display column names
