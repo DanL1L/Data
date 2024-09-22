@@ -36,12 +36,5 @@ if uploaded_file is not None:
     # Basic statistics
     st.write("Basic Statistics:")
     st.write(data.describe())
-
-    # Correlation heatmap
-    st.write("Correlation Heatmap:")
-    corr = data.select_dtypes(include=[np.number]).corr()
-    fig, ax = plt.subplots(figsize=(10, 8))
-    sns.heatmap(corr, annot=True, cmap='coolwarm', ax=ax)
-    st.pyplot(fig)
-
+    
 print("Streamlit app code executed successfully.")
