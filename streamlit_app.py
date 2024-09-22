@@ -13,20 +13,21 @@ import streamlit as st
 # Load dataset
 st.title("Activitati economice")
 st.write("Analiza Datelor")
+
 # Upload file
 uploaded_file = st.file_uploader("Choose file", type="csv")
 if uploaded_file is not None:
     data = pd.read_csv(uploaded_file, header=None)  
-    print(df.head())
+    st.write(data.head())
 
     # Display dataframe info
-    print("\
-    Dataframe Info:")
-    print(df.info())
+    st.write("Dataframe Info:")
+    buffer = []
+    data.info(buf=buffer)
+    s = "\
+".join(buffer)
+    st.text(s)
     
     # Display column names
-    print("\
-    Column Names:")
-    print(df.columns)
-    
-
+    st.write("Column Names:")
+    st.write(data.columns)
